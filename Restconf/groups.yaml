@@ -1,0 +1,8 @@
+---
+
+cisco_xe_group:
+    platform: 'ios'
+cisco_xr_group:
+    platform: 'xr'
+cisco_nx_group:
+    platform: 'nxos'

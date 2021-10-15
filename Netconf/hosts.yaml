@@ -1,0 +1,19 @@
+---
+IOS-XE:
+    hostname: sandbox-iosxe-latest-1.cisco.com
+    username: developer
+    password: C1sco12345
+    groups:
+        - cisco_xe_group
+IOS-XR:
+    hostname: sandbox-iosxr-1.cisco.com
+    username: admin
+    password: C1sco12345
+    groups:
+        - cisco_xr_group
+NX-OS:
+    hostname: sandbox-nxos-1.cisco.com
+    username: admin
+    password: Admin_1234!
+    groups:
+        - cisco_nx_group
