@@ -1,6 +1,6 @@
 from nornir import InitNornir
-from nornir_http.tasks import http_method
-from nornir.core.task import Result
+# from nornir_http.tasks import http_method
+from nornir.core.task import Task, Result
 from nornir_utils.plugins.functions import print_result
 from nornir.core.exceptions import NornirExecutionError
 import json
@@ -24,8 +24,8 @@ def get_restconf(task):
               f"{task.host.password}"),
         verify=False)
     #task.host["facts"] = result.text
-    #result = json.loads(result.content.decode("utf-8"))
-    return Result(host=task.host, result=result)
+    # result = json.loads(result.content.decode("utf-8"))
+    return Result(host=task.host, result=result.content)
 
 
 nr = InitNornir(config_file="config.yaml")
