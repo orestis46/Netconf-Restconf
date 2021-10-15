@@ -7,14 +7,14 @@ from ncclient import manager
 
 arista = {"host": "172.16.21.46",
           "auth_username": "netadmin",
-          "auth_password": "1ntr@c0M",
+          "auth_password": "netadmin",
           "auth_strict_key": False,
           "port": 830,
           }
 
 ncc_arista = {"host": "172.16.21.46",
               "username": "netadmin",
-              "password": "1ntr@c0M",
+              "password": "netadmin",
               "hostkey_verify": False,
               "port": 830,
               }
