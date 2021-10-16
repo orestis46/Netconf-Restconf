@@ -26,7 +26,7 @@ def get_restconf(task):
         auth=(f"{task.host.username}",
               f"{task.host.password}"),
         verify=False)
-    # IOS-XE returns content that will be formated in <dict> while NX-OS response will be in <str>
+    # IOS-XE response is JSON that will be formated in <dict> while NX-OS response is XML and will be in <str>
     if(task.host.platform == "ios"):
         result = json.loads(result.content.decode("utf-8"))
     else:
