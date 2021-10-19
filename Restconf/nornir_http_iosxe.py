@@ -35,9 +35,13 @@ def get_restconf(task):
     return Result(host=task.host, result=result)
 
 
-nr = InitNornir(config_file="config.yaml")
+def main():
+
+    nr = InitNornir(config_file="config.yaml")
+    result = nr.run(task=get_restconf)
+    print_result(result)
+    # ipdb.set_trace()
 
 
-result = nr.run(task=get_restconf)
-print_result(result)
-# ipdb.set_trace()
+if __name__ == "__main__":
+    main()
